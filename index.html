@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشفر الرسائل السرية</title>
+    <style>
+        body { font-family: sans-serif; background-color: #121212; color: #e0e0e0; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        .container { background: #1e1e1e; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); width: 100%; max-width: 400px; }
+        h1 { color: #00e676; text-align: center; font-size: 24px; }
+        textarea { width: 100%; height: 100px; background: #2c2c2c; border: 1px solid #444; color: white; border-radius: 8px; padding: 10px; box-sizing: border-box; margin-bottom: 15px; resize: none; }
+        .buttons { display: flex; gap: 10px; margin-bottom: 15px; }
+        button { flex: 1; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .enc-btn { background: #00e676; color: #000; }
+        .dec-btn { background: #2979ff; color: #fff; }
+        button:active { transform: scale(0.95); }
+        .result-box { background: #333; padding: 15px; border-radius: 8px; border: 1px dashed #666; min-height: 50px; word-break: break-all; }
+        label { display: block; margin-bottom: 5px; font-size: 14px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🔐 مشفر الرسائل السرية</h1>
+    
+    <label>اكتب رسالتك هنا:</label>
+    <textarea id="input" placeholder="اكتب شيئاً..."></textarea>
+    
+    <div class="buttons">
+        <button class="enc-btn" onclick="process(true)">تشفير 🔒</button>
+        <button class="dec-btn" onclick="process(false)">فك التشفير 🔓</button>
+    </div>
+    
+    <label>النتيجة:</label>
+    <div id="result" class="result-box">تظهر النتيجة هنا...</div>
+</div>
+
+<script>
+    function process(isEncode) {
+        const input = document.getElementById('input').value;
+        const resultBox = document.getElementById('result');
+        
+        if (!input) {
+            resultBox.innerText = "الرجاء كتابة نص أولاً!";
+            return;
+        }
+
+        try {
+            if (isEncode) {
+                // تشفير بسيط باستخدام Base64
+                const encoded = btoa(unescape(encodeURIComponent(input)));
+                resultBox.innerText = encoded;
+            } else {
+                // فك تشفير
+                const decoded = decodeURIComponent(escape(atob(input)));
+                resultBox.innerText = decoded;
+            }
+        } catch (e) {
+            resultBox.innerText = "خطأ: النص غير صالح للمعالجة!";
+        }
+    }
+</script>
+
+</body>
+</html>
