@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحة هبوط عصرية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  line-height: 1.8;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  background: #ff6a00;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff8c32;
+  transform: translateY(-3px);
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section p {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.service-box {
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.15);
+}
+
+footer {
+  background: rgba(0,0,0,0.4);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+  </style>
+</head>
+<body>  <!-- الرئيسية -->  <header id="home">
+    <div>
+      <h1>حوّل فكرتك إلى واقع رقمي</h1>
+      <p>نصمّم صفحات هبوط عصرية وجريئة تساعدك على جذب العملاء وزيادة التحويلات.</p>
+      <a href="#contact" class="btn">ابدأ الآن</a>
+    </div>
+  </header>  <!-- من نحن -->  <section id="about">
+    <h2>من نحن</h2>
+    <p>
+      نحن فريق إبداعي نؤمن أن التصميم القوي هو أول خطوة للنجاح.
+      ندمج البساطة مع الجرأة لنصنع تجربة لا تُنسى.
+    </p>
+  </section>  <!-- الخدمات -->  <section id="services">
+    <h2>خدماتنا</h2>
+    <div class="services">
+      <div class="service-box">تصميم صفحات هبوط احترافية</div>
+      <div class="service-box">تجربة مستخدم UI/UX</div>
+      <div class="service-box">مواقع سريعة ومتجاوبة</div>
+    </div>
+  </section>  <!-- تواصل معنا -->  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <p>جاهز تبدأ؟ تواصل معنا الآن ودعنا نعمل على مشروعك القادم.</p>
+    <a href="mailto:info@example.com" class="btn">راسلنا</a>
+  </section>  <footer>
+    <p>© 2026 جميع الحقوق محفوظة</p>
+  </footer></body>
+</html>
